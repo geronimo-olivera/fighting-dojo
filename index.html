@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./CSS/index.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Fighting Dojo Spirit</title>
     </head>
     
@@ -26,6 +27,22 @@
         </header>
 
         <main>
+
+            <section class="indexImages">
+
+                <div data-aos="flip-left">
+                    <img src="./imagenes/imagen1.png" alt="Imagen">
+                </div>
+
+                <div data-aos="flip-up">
+                    <img src="./imagenes/imagen2.png" alt="Imagen">
+                </div>
+
+                <div data-aos="flip-down">
+                    <img src="./imagenes/imagen3.png" alt="Imagen">
+                </div>
+
+            </section>
 
             <section class="disciplines">
                 <!--
@@ -109,6 +126,10 @@
 
         </footer>
         
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 
 </html>

@@ -31,6 +31,7 @@ a {
 
 .navegador-logo-container {
     height: 8.4rem;
+    cursor: url("../imagenes/Guante.png"),auto;
 }
 
 .navegador-logo {
@@ -41,6 +42,16 @@ a {
 .navegador-menu {
     display: flex;
     gap: 0.8rem;
+}
+
+.navegador-menu a {
+    cursor: url("../imagenes/Guante.png"),auto;
+}
+
+/*-----------------------------MAIN---------------------------------*/
+
+.indexImages {
+    max-width: 100%;
 }
 
 /*-----------------------------FOOTER---------------------------------*/
@@ -200,4 +211,22 @@ a {
         width: 0%;
         flex-direction: column;
     }
+}
+
+.indexImages {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.indexImages img {
+    width: 70%;
+    transition: width 2s;
+}
+
+.indexImages img:hover {
+    width: 100%;   
 }
