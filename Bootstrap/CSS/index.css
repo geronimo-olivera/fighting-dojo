@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.navbar-brand {
+    width: 65%;
+}
+
+.footer-logo {
+    width: 100%;
+}
