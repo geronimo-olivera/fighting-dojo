@@ -1,37 +1,46 @@
 * {
-    background-color: black;
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
 }
 
-ul {
-    list-style-type: none;
+body {
+    background-color: black;
 }
 
-li {
-    font-size: 0.6rem;    
+p {
+    margin: 0rem;
+    font-size: 1.2rem;    
     font-weight: 500;
 }
 
-a {
-    text-decoration: none;
-}
 /*-----------------------------HEADER---------------------------------*/
 .headerContainer {
-    align-items: center;
-    border-bottom-style: outset;
-    border-color: #c8d1d1;
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 0rem 2rem 2rem; 
 }
 
-.navegador-menu {
-    display: flex;
-    gap: 0.8rem;
+.navbar-toggler, .navbar-toggler-icon {
+    background-color: white;
+}
+
+.current-link {
+    font-size: 1.3rem;    
+    font-weight: 800;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.item-link {
+    font-size: 1rem;    
+    font-weight: 500;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.navegador-logo {
+    height: 10rem;
+    width: 10rem;
 }
 
 /*-----------------------------MAIN---------------------------------*/
@@ -40,35 +49,33 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 1rem;
 }
 
 .main-consultas {
     display: none;
 }
 
-.main-logo {
-    width: 25%;
-}
-
 .main-form {
     align-items: center;
     background-color: white;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     width: 20rem;
 }
 
 .main-form-header {
-    background-color: white;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
     padding: 1rem;
     text-align: center;
 }
 
 input[type=text], input[type=email], input[type=tel], textarea {
-    background: #f1f1f1;
+    background: #d5d5d5;
     border-radius: 0.5rem;
     border: none;
     margin: 0.5rem;
@@ -77,18 +84,19 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 
 ::placeholder {
-    color: black;
-    opacity: 2;
+    color: rgb(97, 97, 97);
     font-size: 0.9rem;    
     font-weight: 500;
 }
 
-button {
+.send-button {
+    background-color: black;
     border-radius: 0.5rem;
     height: 2rem;
     margin: 1rem;
     width: 8rem;
 }
+
 /*-----------------------------FOOTER---------------------------------*/
 .footer {
     align-items: center;
@@ -112,21 +120,86 @@ iframe {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
-    li {
-        font-size: 1rem;    
+/*-----------------------------HEADER---------------------------------*/
+    .headerContainer {
+        margin: 2rem 2rem; 
+        padding-bottom: 2rem;
     }
+
+    .navegador-logo {
+        display: none;
+    }
+
+    .justify-content-end {
+        justify-content: center !important;
+    }
+
+    .border-top {
+        border-style: none !important;
+    }
+
+    .nav-elements-gap {
+        gap: 2rem;
+    }
+
+    .current-link {
+        font-size: 1.2rem;    
+        text-decoration: overline;
+    }
+    
+    .item-link {
+        font-size: 1.1rem;    
+    }
+
+/*-----------------------------MAIN---------------------------------*/
 
     .main {
         display: flex;
         flex-direction: row;
-        padding: 1rem 4rem 0rem;
+        padding: 1rem 3rem;
+        justify-content: space-between;
     }
 
     .main-consultas {
-        align-items: start;
+        padding-right: 1rem;
+        align-items: center;
         display: flex;
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .main-consultas > p {
+        font-size: 1.5rem;    
+    }
+
+    .main-consultas-logo-container {
+        height: 10rem;
+    }
+
+    .main-consultas-logo {
+        height: 15rem;
+        width: 15rem;
+    }
+    
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: white;
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .circle > img {
+        width: 6.5rem;
+    }
+
+    a { 
+        text-decoration: none;
+        font-size: 1.3rem;    
+        font-weight: 500;
+        color: white;
     }
 
     input[type=text], input[type=email], input[type=tel], textarea {
@@ -143,17 +216,13 @@ iframe {
         gap: 1rem;
     }
 
-    .main-consultas-logo {
-        height: 15rem;
-        width: 15rem;
-    }
-
     button {
         height: 3rem;
         width: 10rem;
         font-size: 1.2rem;
     }
 
+/*-----------------------------FOOTER---------------------------------*/
     .footer {
         flex-direction: row;
         gap: 1rem;
@@ -163,32 +232,120 @@ iframe {
 }
 
 @media (min-width: 1024px) {
-
-    li {
-        font-size: 1.3rem;    
-    }
+/*-----------------------------HEADER---------------------------------*/
 
     .headerContainer {
-        margin: 2rem 2rem;
-        padding: 3rem;
+        margin: 2rem 2rem; 
+        padding-bottom: 2rem;
     }
 
+    .navegador-logo {
+        display: none;
+    }
+
+    .justify-content-end {
+        justify-content: center !important;
+    }
+
+    .border-top {
+        border-style: none !important;
+    }
+
+    .nav-elements-gap {
+        gap: 4rem;
+    }
+
+    .current-link {
+        font-size: 1.7rem;    
+        text-decoration: overline;
+        cursor: url("../imagenes/Guante.png"),auto;
+    }
+
+    .item-link {
+        font-size: 1.6rem;    
+        cursor: url("../imagenes/Guante.png"),auto;
+    }
+
+    .item-link:hover {
+        background-color: white;
+        color: black;
+        border-radius: 20%;
+    }
+
+    .current-link:hover {
+        background-color: white;
+        color: black;
+        border-radius: 20%;
+        text-decoration: none;
+    }
+/*-----------------------------MAIN---------------------------------*/
     .main {
         display: flex;
         flex-direction: row;
-        padding: 1rem 10rem 0rem;
+        padding: 1rem 5rem;
+        justify-content: space-around;
     }
 
+    .main-form {
+        width: 26rem;
+    }
+
+    .main-form-header {
+        font-size: 1.6rem;
+    }
+    
     .main-consultas {
-        align-items: start;
+        padding-right: 1rem;
+        align-items: center;
         display: flex;
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .main-consultas > p {
+        font-size: 2rem;    
+    }
+
+    .main-consultas-logo-container {
+        height: 12rem;
+        cursor: url("../imagenes/Guante.png"),auto;
+    }
+
+    .main-consultas-logo {
+        height: 16rem;
+        width: 16rem;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: white;
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .circle > img {
+        width: 6.5rem;
+    }
+
+    a { 
+        text-decoration: none;
+        font-size: 1.6rem;    
+        font-weight: 500;
+        color: white;
+        cursor: url("../imagenes/Guante.png"),auto;
     }
 
     input[type=text], input[type=email], input[type=tel], textarea {
         margin: 1rem 2rem;
         padding: 1rem;
-        width: 14rem;
+        width: 20rem;
+    }
+
+    ::placeholder {
+        font-size: 1.2rem;    
     }
 
     .main-consultas-sedes {
@@ -199,21 +356,26 @@ iframe {
         gap: 1rem;
     }
 
-    .main-consultas-logo {
-        height: 15rem;
-        width: 15rem;
-    }
-
-    button {
+    .send-button {
         height: 3rem;
         width: 10rem;
-        font-size: 1.2rem;
+        cursor: url("../imagenes/Guante.png"),auto;
     }
 
+/*-----------------------------FOOTER---------------------------------*/
     .footer {
         flex-direction: row;
-        gap: 6rem;
-        justify-content: center;
-        margin: 2rem 1rem 1rem 1rem;
+        gap: 1rem;
+        justify-content: space-evenly;
+        margin: 1rem 4rem;
+    }
+
+    #footerSectionOne, #footerSectionTwo {
+        width: 50%;
+    }
+    
+    iframe {
+        height: 18rem;
+        width: 100%;
     }
 }

@@ -4,41 +4,74 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../CSS/contacto.css">
+        <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="../CSS/contacto.css">       
         <title>Contacto</title>
     </head>
     
     <body>
 
-       <header class="headerContainer">        
-            <nav class="navegador">
-                <ul class="navegador-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../paginas/sobreNosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="../paginas/disciplinas.html">Disciplinas</a></li>
-                    <li><a href="../paginas/blog.html">Blog</a></li>
-                    <li><a href="../paginas/contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+        <header class="navbar navbar-expand-md border-bottom border-1 headerContainer">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="../imagenes/Logo.png" alt="" class="navegador-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                    <ul class="navbar-nav text-center nav-elements-gap">
+
+                        <li class="nav-item border-top">
+                            <a class="nav-link item-link" href="../index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item border-top">
+                            <a class="nav-link item-link" href="../paginas/sobreNosotros.html">Sobre Nosotros</a>
+                        </li>
+
+                        <li class="nav-item border-top">
+                            <a class="nav-link item-link" href="../paginas/disciplinas.html">Disciplinas</a>
+                        </li>
+
+                        <li class="nav-item border-top">
+                            <a class="nav-link item-link" href="../paginas/blog.html">Blog</a>
+                        </li>
+
+                        <li class="nav-item border-top">
+                            <a class="nav-link current-link" href="../paginas/contacto.html">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+            
         </header>
 
         <main class="main">
 
             <section class="main-consultas">
-                <a href="../index.html">
+                <a href="../index.html" class="main-consultas-logo-container">
                     <img src="../imagenes/Logo.png" class="main-consultas-logo">                  
                 </a>
-                <div class="main-consultas-sedes">
-                    <h1>Envianos tus Consultas!</h1>
+                <p>Envianos tus Consultas!</p>
+                <div class="circle">
                     <img src="../imagenes/Whatsapp.png" class="main-logo">
-                    <p><a href="https://wa.me/092405089">Sede Centro</a></p>
-                    <p><a href="https://wa.me/092405089">Sede Pocitos</a></p>   
                 </div>
+                <a href="https://wa.me/092405089">Sede Centro</a>
+                <a href="https://wa.me/092405089">Sede Pocitos</a> 
             </section>
 
             <form class="main-form">
 
-                    <h4 class="main-form-header">¡Envianos tu consulta y te responderemos en breve!</h4>
+                    <p class="main-form-header">¡Envianos tu consulta y te responderemos en breve!</p>
                 
                     <input type="text" placeholder="Nombre" required>
                 
@@ -50,9 +83,10 @@
                 
                     <textarea rows="5" cols="60" placeholder="Consulta" required></textarea>
 
-                    <button type="button">Enviar</button>
+                    <button type="button" class="send-button">Enviar</button>
 
             </form>
+
         </main>
 
         <footer class="footer">
@@ -89,5 +123,8 @@
             </div>
         </footer>
 
+        <script src="../JS/bootstrap.js"></script>
+
     </body>
+
 </html>
