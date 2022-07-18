@@ -1,0 +1,149 @@
+.disciplines {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+
+    div {
+        border: 2px solid;
+        border-color: $index_disciplines_section_color;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    a {
+        @include fontSize(1.3rem, 500);
+        align-items: center;
+        background-color: $index_disciplines_section_color;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.7rem;
+        text-decoration: none;
+    }
+}
+
+.benefit {
+    position: relative;
+
+    &_image {
+        background-image: url("../imagenes/discipline_section_menu_background_small.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(2px);
+        height: calc(100vh - 74vh);
+        opacity: 0.9;
+    }
+
+    &_text {
+        background-color: rgba(0,0,0, 0.4);
+        border: 3px solid #f1f1f1;
+        left: 50%;
+        padding: 0.8rem;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .disciplines {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+        grid-template-areas: 
+            ". ."
+            ". ."
+            "LastImage LastImage";
+
+        div {
+            width: 20rem;
+        }  
+    }
+
+    .lastImage { 
+        grid-area: LastImage; 
+    }
+    
+    .disciplines div {
+        width: 20rem;
+    }  
+    
+    .benefit {
+
+        &_image {
+            background-image: url("../imagenes/discipline_section_menu_background_medium.png");
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .disciplines {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+        grid-template-areas: 
+            ". ."
+            ". ."
+            "LastImage LastImage";
+
+        div {
+            width: 26rem;
+        }
+    }
+
+    .lastImage { 
+        grid-area: LastImage; 
+    }
+
+    .benefit {
+
+        &_image {
+            background-image: url("../imagenes/discipline_section_menu_background_large.png");
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .disciplines {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+        grid-template-areas: 
+            ". ."
+            ". ."
+            ". .";
+
+        div {
+            width: 26rem;
+        }
+    }
+
+    .noLastImage {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .lastImage { 
+        grid-area: 2 / 2 / 3 / 4;
+    }    
+}

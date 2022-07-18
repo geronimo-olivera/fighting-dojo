@@ -1,0 +1,9 @@
+@mixin fontSize($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin logoSize($widht, $height) {
+    width: $widht;
+    height: $height;
+}

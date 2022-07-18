@@ -1,0 +1,109 @@
+header {
+    margin: 0rem 3rem; 
+}
+
+.header {
+
+    &_logo { 
+        @include logoSize(8rem, 8rem);
+    }
+
+    &_icono_menu {
+        background-color: $header_menu_button_background_color;
+    }
+
+    &_navegador_justify_content {
+        justify-content: end;
+    }
+}
+
+nav li {
+    border-top: 1px solid;
+}
+
+.link {
+
+    &_actual {
+        @include fontSize(1.3rem, $page_letter_weight_link_selected);
+        color: $page_letter_color;
+    }
+
+    &_item {
+        @include fontSize(1rem, $page_letter_weight_link);
+        color: $page_letter_color;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    header {
+        margin: 1rem 2rem; 
+    }
+
+    .header {
+
+        &_logo { 
+            @include logoSize(10rem, 10rem);
+        }
+
+        &_navegador_elements_gap {
+            gap: 1rem;
+        }
+    }
+
+    nav li {
+        border-top: none;
+    }
+
+    .link {
+        &_actual {
+            @include fontSize(1.1rem, $page_letter_weight_link_selected);
+            text-decoration: overline;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .header {
+
+        &_logo { 
+            @include logoSize(12rem, 12rem);
+            cursor: url("../imagenes/guante.png"),auto;
+        }
+
+        &_navegador_elements_gap {
+            gap: 2.5rem;
+        }
+    }
+
+    nav li {
+        border-top: none;
+    }
+
+    .link {
+
+        &_actual {
+            @include fontSize(1.5rem, $page_letter_weight_link_selected);
+            text-decoration: overline;
+            cursor: url("../imagenes/guante.png"),auto;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                border-radius: 20%;
+            }
+        }
+    
+        &_item {
+            @include fontSize(1.2rem, $page_letter_weight_link);
+            cursor: url("../imagenes/guante.png"),auto;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                border-radius: 20%;
+            }
+        }
+    }
+}

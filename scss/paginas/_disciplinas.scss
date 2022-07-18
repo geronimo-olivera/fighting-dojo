@@ -1,0 +1,67 @@
+.disciplinas {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    &_sections {
+        border: 1px solid ;
+        margin: 0.5rem 2rem;
+        border-color: #b46500;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &_titulo {
+        @include fontSize(1.3rem, 500);
+        background-color: #b46500;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    &_explicacion {
+        @include fontSize(1.1rem, 500);
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .disciplinas {
+
+        &_sections {
+            margin: 0.5rem 3rem;
+        }
+    
+        &_titulo {
+            @include fontSize(1.3rem, 500);
+        }
+    
+        &_explicacion {
+            @include fontSize(1.1rem, 500);
+            padding: 1rem;
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .disciplinas {
+
+        &_sections {
+            margin: 0.5rem 5rem;
+        }
+    
+        &_titulo {
+            @include fontSize(1.5rem, 500);
+        }
+    
+        &_explicacion {
+            @include fontSize(1.2rem, 500);
+            padding: 1rem;
+        }
+    }
+}
