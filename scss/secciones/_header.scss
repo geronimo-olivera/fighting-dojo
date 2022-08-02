@@ -25,7 +25,8 @@ nav li {
 
     &_actual {
         @include fontSize(1.3rem, $page_letter_weight_link_selected);
-        color: $page_letter_color;
+        color: $header_actual_letter_color;
+        background-color: white;
     }
 
     &_item {
@@ -58,7 +59,7 @@ nav li {
     .link {
         &_actual {
             @include fontSize(1.1rem, $page_letter_weight_link_selected);
-            text-decoration: overline;
+            border-radius: 5rem;
         }
     }
 }
@@ -84,25 +85,20 @@ nav li {
     .link {
 
         &_actual {
-            @include fontSize(1.5rem, $page_letter_weight_link_selected);
-            text-decoration: overline;
+            @include fontSize(1.3rem, $page_letter_weight_link_selected);
+            border-radius: 5rem;
             cursor: url("../imagenes/guante.png"),auto;
-
-            &:hover {
-                background-color: white;
-                color: black;
-                border-radius: 20%;
-            }
         }
     
         &_item {
-            @include fontSize(1.2rem, $page_letter_weight_link);
+            @include fontSize(1.1rem, $page_letter_weight_link);
             cursor: url("../imagenes/guante.png"),auto;
+            border-radius: 20rem;
 
             &:hover {
                 background-color: white;
                 color: black;
-                border-radius: 20%;
+                border-radius: 20rem;
             }
         }
     }

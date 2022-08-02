@@ -3,15 +3,18 @@
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+    gap: 1rem;
 
     &_sections {
         border: 1px solid ;
-        margin: 0.5rem 2rem;
+        margin: 0.5rem 3rem;
         border-color: #b46500;
     }
 
     img {
         width: 100%;
+        border-bottom: 1px solid;
+        border-color: #b46500;
     }
 
     &_titulo {
@@ -23,7 +26,16 @@
 
     &_explicacion {
         @include fontSize(1.1rem, 500);
-        padding: 0.5rem;
+        padding: 1rem;
+    }
+
+    &_imagenes{
+        border-top: 1px solid;
+        border-color: #b46500;
+
+        &_grande {
+            display: none;
+        }
     }
 }
 
@@ -43,8 +55,23 @@
             @include fontSize(1.1rem, 500);
             padding: 1rem;
         }
-    }
 
+        &_imagenes{
+            display: none;
+
+            &_grande {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                padding: 1rem;
+
+                img {
+                    border: 1px solid;
+                    border-color: #b46500;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1024px) {
@@ -62,6 +89,22 @@
         &_explicacion {
             @include fontSize(1.2rem, 500);
             padding: 1rem;
+        }
+
+        &_imagenes{
+            display: none;
+
+            &_grande {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                padding: 1rem;
+
+                img {
+                    border: 1px solid;
+                    border-color: #b46500;
+                }
+            }
         }
     }
 }

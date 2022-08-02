@@ -26,83 +26,54 @@
     flex-direction: column;
     align-items: center;
     margin: 2rem;
-    position: relative;
 
     div {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        filter: blur(1px);
-        height: calc(100vh - 78vh);
-        opacity: 0.9;
+        border-radius: 1rem;
+        height: calc(100vh - 74vh);
         margin: 1rem;
-        width: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        border-color: #b46500;
+    }
+
+    img {
+        margin: 0.6rem;
+        width: 12rem;
+        border-radius: 25rem;
+        border: 1px solid;
+        border-color: #b46500;
+    }
+
+    p {
+        @include fontSize(1.2rem, 800);
+        border-radius: 20px;
+        background-color: white;
+        width: 10rem;
+        border: 1px solid;
+        color: #b46500;
+        opacity: 0.7;
+        text-align: center;
     }
 
     &_entrenador {
 
         &_uno {
-
-            left: 50%;
-            position: absolute;
-            text-align: center;
-            top: 23%;
-            transform: translate(-50%, -50%);
-
-            img {
-                margin: 0.6rem;
-                width: 70%;
-                border-radius: 100%;
-                border: 1px solid;
-            }
-
-            &_background {
-                background-image: url("../imagenes/staff_entrenador_uno_background_small.png");
-            }
+            background-image: url("../imagenes/staff_entrenador_uno_background_small.png");
         }
 
         &_dos {
-
-            left: 50%;
-            position: absolute;
-            text-align: center;
-            top: 55%;
-            transform: translate(-50%, -50%);
-
-            img {
-                margin: 0.6rem;
-                width: 70%;
-                border-radius: 100%;
-                border: 1px solid;
-            }
-
-            &_background {
-                background-image: url("../imagenes/staff_entrenador_dos_background_small.png");
-            }
+            background-image: url("../imagenes/staff_entrenador_dos_background_small.png");
         }
 
         &_tres {
-
-            left: 50%;
-            position: absolute;
-            text-align: center;
-            top: 86%;
-            transform: translate(-50%, -50%);
-
-            img {
-                margin: 0.6rem;
-                width: 70%;
-                border-radius: 100%;
-                border: 1px solid;
-            }
-
-            &_background {
-                background-image: url("../imagenes/staff_entrenador_tres_background_small.png");
-            }
-        }
-
-        p {
-            @include fontSize(1.1rem, 500);
+            background-image: url("../imagenes/staff_entrenador_tres_background_small.png");
         }
     }
 }
@@ -112,35 +83,30 @@
     .staff {
        
         div {
-            height: calc(100vh - 66vh);
+            height: calc(100vh - 60vh);
+        }
+
+        img {
+            width: 17rem;
+        }
+
+        p {
+            @include fontSize(1.3rem, 500);
         }
     
         &_entrenador {
     
             &_uno {
-    
-                &_background {
-                    background-image: url("../imagenes/staff_entrenador_uno_background_medium.png");
-                }
+                background-image: url("../imagenes/staff_entrenador_uno_background_medium.png");
             }
     
             &_dos {
-    
-                &_background {
-                    background-image: url("../imagenes/staff_entrenador_dos_background_medium.png");
-                }
+                background-image: url("../imagenes/staff_entrenador_dos_background_medium.png");
             }
     
             &_tres {
-    
-                &_background {
-                    background-image: url("../imagenes/staff_entrenador_tres_background_medium.png");
-                }
+                background-image: url("../imagenes/staff_entrenador_tres_background_medium.png");
             }
-        }
-
-        p {
-            @include fontSize(1.2rem, 500);
         }
     }
 }
@@ -149,6 +115,7 @@
 
     .bienvenido {
         gap: 2rem;
+        margin: 3rem 2rem;
     
         div {
             flex-direction: row;
@@ -161,49 +128,64 @@
     }
 
     .staff {
+
+        display: grid; 
+        margin: 0rem 2rem;
+        align-content: center;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 0rem 1rem; 
+        grid-template-areas: 
+            "staff_header staff_header staff_header"
+            "staff_entrenador_uno staff_entrenador_dos staff_entrenador_tres";
        
         div {
-            height: calc(100vh - 66vh);
+            height: calc(100vh - 64vh);
+            width: 100%;
+            margin: 0rem;
         }
-    
-        &_entrenador {
-    
-            &_uno {
-    
-                &_background {
-                    background-image: url("../imagenes/staff_entrenador_uno_background_large.png");
-                }
 
-                img {
-                    width: 40%;
-                }
-            }
-    
-            &_dos {
-    
-                &_background {
-                    background-image: url("../imagenes/staff_entrenador_dos_background_large.png");
-                }
-
-                img {
-                    width: 40%;
-                }
-            }
-    
-            &_tres {
-    
-                &_background {
-                    background-image: url("../imagenes/staff_entrenador_tres_background_large.png");
-                }
-
-                img {
-                    width: 40%;
-                }
-            }
+        img {
+            width: 14rem;
         }
 
         p {
-            @include fontSize(1.3rem, 500);
+            @include fontSize(1.2rem, 500);
+        }
+
+        &_header {
+            grid-area: staff_header; 
+            margin-bottom: 2rem;
+        }
+    
+        &_entrenador {
+
+            &_uno {   
+                grid-area: staff_entrenador_uno;
+                background-image: url("../imagenes/staff_entrenador_uno_background_large.png"); 
+   
+                &:hover {
+                    opacity: 0.8;                   
+                }
+            }
+    
+            &_dos {   
+                grid-area: staff_entrenador_dos;
+                background-image: url("../imagenes/staff_entrenador_dos_background_large.png"); 
+
+                &:hover {
+                    opacity: 0.8;    
+                }
+            }
+    
+            &_tres {  
+                grid-area: staff_entrenador_tres;
+                background-image: url("../imagenes/staff_entrenador_tres_background_large.png");
+
+                &:hover {
+                    opacity: 0.8;                   
+                }
+            }
         }
     }
 }
